@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Reservation</string>
+    <string name="log_in">Log in</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+    <string name="welcome_to_a_very_fancy_restaurant">Welcome to a very fancy restaurant!!</string>
 </resources>
