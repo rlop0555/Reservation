@@ -25,8 +25,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".LogInActivity"></activity>
-        <activity android:name=".BeginReservationActivity"></activity>
+        <activity
+            android:name=".LogInActivity">
+        </activity>
+        <activity android:name=".BeginReservationActivity">
+        </activity>
+        <activity android:name=".SelectTableActivity">
+        </activity>
     </application>
 
 </manifest>
