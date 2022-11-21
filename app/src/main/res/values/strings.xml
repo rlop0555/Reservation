@@ -9,5 +9,9 @@
     <string name="date_of_reservation">Date of Reservation</string>
     <string name="number_guests">Number of Guests</string>
     <string name="submit">Submit</string>
+    <string name="please_enter_your_username_and_password">Please enter your username and password</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
 
 </resources>
