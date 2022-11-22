@@ -1,5 +1,6 @@
 package com.example.reservation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -39,13 +40,18 @@ class LogInActivity : AppCompatActivity() {
 
                 val user : User = userDatabase.attemptLogin(username, password)
 
+                // this is not always null, idk why the IDE says this. plz ignore
                 if(user != null) {
-                    Toast.makeText(applicationContext,
-                        user.name,
-                        Toast.LENGTH_SHORT).show()
+                    val bundle = Bundle()
+                    bundle.putString("username", username)
+
+                    val intent = Intent(this, BeginReservationActivity::class.java)
+                    intent.putExtras(bundle)
+
+                    startActivity(intent)
                 } else {
                     Toast.makeText(applicationContext,
-                        "fuck you",
+                        "Invalid username or password, please try again",
                         Toast.LENGTH_SHORT).show()
                 }
             }

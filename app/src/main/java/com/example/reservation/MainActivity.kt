@@ -4,9 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.reservation.data.User
-import com.example.reservation.data.UserDao
-import com.example.reservation.data.UserDatabase
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         val btnGuest: Button = findViewById(R.id.btnGuest)
         btnGuest.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("username", "guest")
+
             val intent = Intent(this, BeginReservationActivity::class.java)
+            intent.putExtras(bundle)
+
             startActivity(intent)
         }
     }
