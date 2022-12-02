@@ -17,6 +17,7 @@ class BeginReservationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_begin_reservation)
 
+
         val oldBundle = intent.extras
 
         if (oldBundle != null) {
